@@ -25,7 +25,20 @@ console.log(declinationOfNumber(5, "стул", "стула", "стульев"));
 <script>
   "use strict";
 
-  function declinationOfNumber(count, one, two, five) {
+
+	function declinationOfNumber(count, one, two, five) {
+    const n100 = Math.abs(count) % 100;
+    const n10 = n100 % 10;
+
+    if (n100 >= 5 && n100 <= 20) {
+      return five;
+    }
+    if (n10 > 1 && n10 < 5) {
+      return two;
+    }
+    if (n10 === 1) {
+      return one;
+    }
 
   }
 

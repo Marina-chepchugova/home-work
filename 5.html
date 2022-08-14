@@ -32,7 +32,26 @@ Infinity делать не нужно, однако, в случае если б
 <script>
   "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+ 		/**
+	* Возвращает результат оперции, который был передан в параметр operation для 
+	двух первых аргументов
+	* @param {number} a  Число 1
+   * @param {number} b  Число 2
+   * @return {number} результат оперции
+	* в случае если был передан некорректный
+      аргумент в параметр operation, возможен NaN.
+	*/
+
+	function mathOperation(a , b , operation){
+		switch(operation){
+			case "+" : return sum (a , b)
+			case "-" : return diff (a , b)
+			case "*": return multi (a , b)
+			case "/": return divis (a , b)
+			default : return NaN
+		}
+
+	}
 </script>
 </body>
 </html>
